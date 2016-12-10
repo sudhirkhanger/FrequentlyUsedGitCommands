@@ -25,3 +25,13 @@ git remote set-url origin new-url
     git add .
     git commit -m 'Removed all files that are in the .gitignore' 
     git push origin master
+
+## Git Stash
+
+    git stash
+    git stash list
+    git stash drop
+
+## Git Checkout
+
+    git checkout branch-name

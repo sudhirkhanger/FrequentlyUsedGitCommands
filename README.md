@@ -17,7 +17,7 @@ git remote -v
 
 ## Set new url
 
-git remote set-url origin new-url
+    git remote set-url origin new-url
 
 ## Remove files after adding .gitignore
 

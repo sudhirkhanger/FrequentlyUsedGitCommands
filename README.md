@@ -14,9 +14,7 @@ These are my frequently used Git commands.
     
     git branch -v
     
-    git remote -v
-
-## Set new url
+## set new url
 
     git remote set-url origin new-url
 
@@ -108,3 +106,31 @@ HEAD^^^
 HEAD~3
 
 [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
+
+## Notes from Udacity's GitHub & Collaboration
+
+local - your own git repo
+remote - 3rd party git repo which may or may not be local.
+origin - main remote repo
+
+git remote - manager and interact with the remote repositories.
+	
+git remote add origin git@github.com:sudhirkhanger/my-travel-plans.git - add shortname to the url
+
+git push -u origin master - send local commits to the remote repo. (git push <remote-shortname> <branch>)
+	
+git remote -v - displays the shortname and url
+
+git log --oneline --graph --decorate --all
+
+origin/master - tracking branch - meaning remote origin has master branch at some commit.
+
+git pull origin master - pull origin's commit to the master branch. Retrieve commits and merge.
+
+git fetch origin master - pull origin's commit but doesn't merge with master branch.
+
+One main point when you want to use git fetch rather than git pull is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote.
+
+git merge origin/master - merge the origin/master to the current branch.
+
+[github & Collaboration](https://in.udacity.com/course/github-collaboration--ud456)

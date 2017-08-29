@@ -91,19 +91,19 @@ git reset --soft HEAD^ - moves the parent commit to the staging area
 
 git reset --hard HEAD^ - erases the parent commit 
 
-^ – indicates the parent commit
-~ – indicates the first parent commit
-
-the parent commit – the following indicate the parent commit of the current commit
-HEAD^
-HEAD~
-HEAD~1
-the grandparent commit – the following indicate the grandparent commit of the current commit
-HEAD^^
-HEAD~2
-the great-grandparent commit – the following indicate the great-grandparent commit of the current commit
-HEAD^^^
-HEAD~3
+    ^ – indicates the parent commit
+    ~ – indicates the first parent commit
+    
+    the parent commit – the following indicate the parent commit of the current commit
+    HEAD^
+    HEAD~
+    HEAD~1
+    the grandparent commit – the following indicate the grandparent commit of the current commit
+    HEAD^^
+    HEAD~2
+    the great-grandparent commit – the following indicate the great-grandparent commit of the current commit
+    HEAD^^^
+    HEAD~3
 
 [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
 
@@ -129,7 +129,7 @@ git pull origin master - pull origin's commit to the master branch. Retrieve com
 
 git fetch origin master - pull origin's commit but doesn't merge with master branch.
 
-One main point when you want to use git fetch rather than git pull is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote.
+_One main point when you want to use git fetch rather than git pull is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote._
 
 git merge origin/master - merge the origin/master to the current branch.
 

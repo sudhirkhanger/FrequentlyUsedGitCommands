@@ -104,6 +104,11 @@ git reset --hard HEAD^ - erases the parent commit
     the great-grandparent commit – the following indicate the great-grandparent commit of the current commit
     HEAD^^^
     HEAD~3
+                           
+	            HEAD~2      HEAD~1      HEAD
+                                        master
+A-----B-----C-----D-----------E-----------F
+
 
 [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
 
@@ -132,5 +137,17 @@ git fetch origin master - pull origin's commit but doesn't merge with master bra
 _One main point when you want to use git fetch rather than git pull is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote._
 
 git merge origin/master - merge the origin/master to the current branch.
+
+git shortlog - how many commits each contributor made
+
+git shortlog -s -n - number of commits and dev name 
+
+git log --author=<contributor name> - list all commits by contributor name
+
+git log --grep=<search> - search commits with search term search
+
+git rebase -i HEAD~3 - base to the 4th commit. squash 3 commits into one.
+
+git push -f - force push
 
 [github & Collaboration](https://in.udacity.com/course/github-collaboration--ud456)

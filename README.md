@@ -151,3 +151,16 @@ git rebase -i HEAD~3 - base to the 4th commit. squash 3 commits into one.
 git push -f - force push
 
 [github & Collaboration](https://in.udacity.com/course/github-collaboration--ud456)
+
+---
+
+## Git remove files
+
+git rm file1.txt
+git commit -m "remove file1.txt"
+
+remove from git but not from file system
+git rm --cached file1.txt
+
+git push origin master
+

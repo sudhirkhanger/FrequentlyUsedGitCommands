@@ -91,8 +91,8 @@ git reset --soft HEAD^ - moves the parent commit to the staging area
 
 git reset --hard HEAD^ - erases the parent commit 
 
-    ^ – indicates the parent commit
-    ~ – indicates the first parent commit
+    ^ – lambda indicates the parent commit
+    ~ – tilde indicates the first parent commit
     
     the parent commit – the following indicate the parent commit of the current commit
     HEAD^
@@ -107,7 +107,7 @@ git reset --hard HEAD^ - erases the parent commit
                            
 	            HEAD~2      HEAD~1      HEAD
                                         master
-A-----B-----C-----D-----------E-----------F
+    A-----B-----C-----D-----------E-----------F
 
 
 [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
@@ -163,4 +163,16 @@ remove from git but not from file system
 git rm --cached file1.txt
 
 git push origin master
+
+## http://think-like-a-git.net
+
+to list all commits in your repository at the command line
+git log --oneline --abbrev-commit --all
+
+git log --oneline --abbrev-commit --all --graph
+
+If you want to see branch and tag labels, add --decorate:
+git log --oneline --abbrev-commit --all --graph --decorate
+
+git log --oneline --abbrev-commit --all --graph --decorate --color
 

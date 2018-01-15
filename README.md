@@ -39,7 +39,7 @@ These are my frequently used Git commands.
 
 Create a new repo empty repository in the current directory
 
-	git status - status
+	git init
 	
 Create an identical copy of an existing repository
 

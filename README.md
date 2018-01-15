@@ -35,19 +35,39 @@ These are my frequently used Git commands.
 
     git checkout branch-name
 
-## Commands fromt he Udacity's Version Control with Git course
+## Commands from the Udacity's Version Control with Git course
 
-git status - status
+Create a new repo empty repository in the current directory
 
-git log - info about existing commits
+	git status - status
+	
+Create an identical copy of an existing repository
 
-git show - info about a given commit commit id or sha
+	git clone <path-to-repository-to-clone>
+	
+Display current status of the repository
 
-git log --oneline show log in one lines.
+    git status
+	
+Displays all the commits of a repository including SHA, author, date, and the message
 
-git log --stat - files changed, insertions, deletions, etc.
+    git log
+	
+Displays short SHA and the message only
 
-git log -p - detailed changes.
+    git log --oneline
+	
+Displays modified files, number of lines added or removed, and summary
+
+    git log --stat
+	
+Displays modified files, location of the lines added or removed, and the actual changes
+
+    git log -p
+	
+Displays information about one particular commit
+
+    git show <SHA1>
 
 git add filename - add the file to staging index
 

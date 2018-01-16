@@ -69,33 +69,63 @@ Displays information about one particular commit
 
     git show <SHA1>
 
-git add filename - add the file to staging index
+Adds the files from the working directory to the staging index aka staging files
 
-git rm --cached <file> - remove the file from the staging index without deleting
+    git add <filename>
+	
+Removes files from the staging index but doesn't delete the actual content
 
-git add . - add all files recursively from the current directory
+    git rm --cached <file>
 
-git commit -m "Initial commit" - only message and no description
+Add all files and folders from the current directory
 
-git diff - look at changes made but not committed
+    git add .
+	
+Saves or records the changes to the repository (from the staging index)
 
-git tag -a v1.0 - add tag v1.0 to the latest commit (-a stands for annotated tag)
+	git commit #Opens the editor
+	git commit -m <msg> #Use <msg> as the commit message
 
-git tag - display all tags
+Displays files modified, location of lines added/removed, and actual changes
 
-git tag -d v1.0 - delete the tags
+    git diff
 
-git tag -a v1.0 a87984 - Adding A Tag To A Past Commit
+Displays all tags
 
-git branch - list all branches 
+    git tag
+	
+Creates annotated tags(more info)
 
-git branch branch-name - create a branch
+    git tag -a v1.0
 
-git checkout sidebar - switch to branch sidebar
+Add tag to a particular commit
 
-git branch -d sidebar - delete the branch sidebar
+    git tag -a v1.0 <SHA1>
 
-git branch -D sidebar - force delete when there is a commit
+Delete a tag
+
+    git tag -d v1.0
+	
+Branch
+
+master - default or the first branch provided by the git
+HEAD - points to the active branch
+
+List all branches
+
+    git branch
+	
+Create a branch
+
+	git branch <branch-name>
+	
+Switch to a branch
+
+	git checkout <branch-name>
+	
+git branch -d <branch-name> - delete the branch sidebar
+
+git branch -D <branch-name> - sidebar - force delete when there is a commit
 
 git merge <name-of-branch-to-merge-in>
 

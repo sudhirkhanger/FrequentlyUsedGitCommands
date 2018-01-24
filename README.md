@@ -35,7 +35,7 @@ These are my frequently used Git commands.
 
     git checkout branch-name
 
-## Commands from the Udacity's Version Control with Git course
+## Commands from the Udacity's [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
 
 Create a new repo empty repository in the current directory
 
@@ -123,46 +123,87 @@ Switch to a branch
 
 	git checkout <branch-name>
 	
-git branch -d <branch-name> - delete the branch sidebar
+Delete a branch
+	
+    git branch -d <branch-name>
 
-git branch -D <branch-name> - sidebar - force delete when there is a commit
+Force delete a branch with unique commit
 
-git merge <name-of-branch-to-merge-in>
+    git branch -D <branch-name>
+	
+Add a branch to commit
 
-git commit --amend - alter the most-recent commit
+    git branch <branch-name> <SHA1>
+	
+Create and switch to the branch
 
-git revert <SHA-of-commit-to-revert> - will undo the changes that were made by the provided commit and creates a new commit to record the change
+    git checkout -b <branch-name>
+	
+Display all branchs in a graph
 
-git branch backup - backs up
+    git log --oneline --decorate --graph --all
 
-git reset --mixed HEAD^ - move the parent commit to working directory
+Merge
 
-git reset --soft HEAD^ - moves the parent commit to the staging area
+* Combining branches together
+* Makes a commit
 
-git reset --hard HEAD^ - erases the parent commit 
+Combine <branch-name> to the active branch.
 
-    ^ – lambda indicates the parent commit
-    ~ – tilde indicates the first parent commit
-    
-    the parent commit – the following indicate the parent commit of the current commit
-    HEAD^
-    HEAD~
-    HEAD~1
-    the grandparent commit – the following indicate the grandparent commit of the current commit
-    HEAD^^
-    HEAD~2
-    the great-grandparent commit – the following indicate the great-grandparent commit of the current commit
-    HEAD^^^
-    HEAD~3
-                           
-	            HEAD~2      HEAD~1      HEAD
-                                        master
-    A-----B-----C-----D-----------E-----------F
+    git merge <branch-name>
+	
+Indicators
 
+	<<<<<<< HEAD everything below this line (until the next indicator) shows you what's on the current branch
+    ||||||| merged common ancestors everything below this line (until the next indicator) shows you what the original lines were
+	======= is the end of the original lines, everything that follows (until the next indicator) is what's on the branch that's being merged in
+	>>>>>>> <branch-name> is the ending indicator of what's on the branch that's being merged in (in this case, the <branch-name> branch)
+	
+Change the last commit or add/remove the files.
 
-[Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
+	git commit --amend
+	
+Reverse a previously made commit
 
-## Notes from Udacity's GitHub & Collaboration
+    git revert <SHA>
+
+Ancestry References
+
+	^ - caret
+	~ - tilde
+
+    The parent commit – the following indicate the parent commit of the current commit
+		HEAD^
+		HEAD~
+		HEAD~1
+
+	The grandparent commit – the following indicate the grandparent commit of the current commit
+		HEAD^^
+		HEAD~2
+
+	The great-grandparent commit – the following indicate the great-grandparent commit of the current commit
+		HEAD^^^
+		HEAD~3
+
+	^ when merged this represents the parent which had HEAD pointed to it. The other branch was merged into this one.
+	^2 the second parent or the branch which was merged into the first parent.
+	
+Erase commits
+
+	Move the head to the parent commit and discarded commit to the working directory.
+	git reset --mixed HEAD^
+	
+	Moves the discarded commit to the staging area
+	git reset --soft HEAD^
+
+	Erase commit or move them to the trash
+	git reset --hard HEAD^
+
+Make a branch on the current commit
+
+    git branch backup
+
+## Notes from Udacity's [GitHub & Collaboration](https://in.udacity.com/course/github-collaboration--ud456)
 
 local - your own git repo
 remote - 3rd party git repo which may or may not be local.
@@ -199,8 +240,6 @@ git log --grep=<search> - search commits with search term search
 git rebase -i HEAD~3 - base to the 4th commit. squash 3 commits into one.
 
 git push -f - force push
-
-[github & Collaboration](https://in.udacity.com/course/github-collaboration--ud456)
 
 ---
 

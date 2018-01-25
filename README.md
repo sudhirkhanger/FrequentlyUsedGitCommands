@@ -1,41 +1,6 @@
 # FrequentlyUsedGitCommands
 
-These are my frequently used Git commands.
-
-    git reset --hard HEAD
-
-    git remote show branch
-    
-    git branch -r
-    
-    git branch -a
-    
-    git branch -vv
-    
-    git branch -v
-    
-## set new url
-
-    git remote set-url origin new-url
-
-## Remove files after adding .gitignore
-
-    git rm -r --cached . 
-    git add .
-    git commit -m 'Removed all files that are in the .gitignore' 
-    git push origin master
-
-## Git Stash
-
-    git stash
-    git stash list
-    git stash drop
-
-## Git Checkout
-
-    git checkout branch-name
-
-## Commands from the Udacity's [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
+## [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
 
 Create a new repo empty repository in the current directory
 
@@ -108,8 +73,8 @@ Delete a tag
 	
 Branch
 
-master - default or the first branch provided by the git
-HEAD - points to the active branch
+	master - default or the first branch provided by the git
+	HEAD - points to the active branch
 
 List all branches
 
@@ -145,8 +110,8 @@ Display all branchs in a graph
 
 Merge
 
-* Combining branches together
-* Makes a commit
+	* Combining branches together
+	* Makes a commit
 
 Combine <branch-name> to the active branch.
 
@@ -203,65 +168,96 @@ Make a branch on the current commit
 
     git branch backup
 
-## Notes from Udacity's [GitHub & Collaboration](https://in.udacity.com/course/github-collaboration--ud456)
+## [GitHub & Collaboration](https://in.udacity.com/course/github-collaboration--ud456)
 
-local - your own git repo
-remote - 3rd party git repo which may or may not be local.
-origin - main remote repo
+    local - your own git repo
+    remote - 3rd party git repo which may or may not be local.
+    origin - main remote repo
 
-git remote - manager and interact with the remote repositories.
-	
-git remote add origin git@github.com:sudhirkhanger/my-travel-plans.git - add shortname to the url
+    git remote - manager and interact with the remote repositories.
+    	
+    git remote add origin git@github.com:sudhirkhanger/my-travel-plans.git - add shortname to the url
 
-git push -u origin master - send local commits to the remote repo. (git push <remote-shortname> <branch>)
-	
-git remote -v - displays the shortname and url
+    git push -u origin master - send local commits to the remote repo. (git push <remote-shortname> <branch>)
+    	
+    git remote -v - displays the shortname and url
 
-git log --oneline --graph --decorate --all
+    git log --oneline --graph --decorate --all
 
-origin/master - tracking branch - meaning remote origin has master branch at some commit.
+    origin/master - tracking branch - meaning remote origin has master branch at some commit.
 
-git pull origin master - pull origin's commit to the master branch. Retrieve commits and merge.
+    git pull origin master - pull origin's commit to the master branch. Retrieve commits and merge.
 
-git fetch origin master - pull origin's commit but doesn't merge with master branch.
+    git fetch origin master - pull origin's commit but doesn't merge with master branch.
 
-_One main point when you want to use git fetch rather than git pull is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote._
+    _One main point when you want to use git fetch rather than git pull is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote._
 
-git merge origin/master - merge the origin/master to the current branch.
+    git merge origin/master - merge the origin/master to the current branch.
 
-git shortlog - how many commits each contributor made
+    git shortlog - how many commits each contributor made
 
-git shortlog -s -n - number of commits and dev name 
+    git shortlog -s -n - number of commits and dev name 
 
-git log --author=<contributor name> - list all commits by contributor name
+    git log --author=<contributor name> - list all commits by contributor name
 
-git log --grep=<search> - search commits with search term search
+    git log --grep=<search> - search commits with search term search
 
-git rebase -i HEAD~3 - base to the 4th commit. squash 3 commits into one.
+    git rebase -i HEAD~3 - base to the 4th commit. squash 3 commits into one.
 
-git push -f - force push
+    git push -f - force pushThese are my frequently used Git commands.
 
----
+    git reset --hard HEAD
 
-## Git remove files
+    git remote show branch
+    
+    git branch -r
+    
+    git branch -a
+    
+    git branch -vv
+    
+    git branch -v
+    
+set new url
 
-git rm file1.txt
-git commit -m "remove file1.txt"
+    git remote set-url origin new-url
 
-remove from git but not from file system
-git rm --cached file1.txt
+Remove files after adding .gitignore
 
-git push origin master
+    git rm -r --cached . 
+    git add .
+    git commit -m 'Removed all files that are in the .gitignore' 
+    git push origin master
 
-## http://think-like-a-git.net
+Git Stash
 
-to list all commits in your repository at the command line
-git log --oneline --abbrev-commit --all
+    git stash
+    git stash list
+    git stash drop
 
-git log --oneline --abbrev-commit --all --graph
+Git Checkout
 
-If you want to see branch and tag labels, add --decorate:
-git log --oneline --abbrev-commit --all --graph --decorate
+    git checkout branch-name
 
-git log --oneline --abbrev-commit --all --graph --decorate --color
+Git remove files
+
+    git rm file1.txt
+    git commit -m "remove file1.txt"
+
+    remove from git but not from file system
+    git rm --cached file1.txt
+
+    git push origin master
+
+[Think Like a Git](http://think-like-a-git.net)
+
+    to list all commits in your repository at the command line
+    git log --oneline --abbrev-commit --all
+
+    git log --oneline --abbrev-commit --all --graph
+
+    If you want to see branch and tag labels, add --decorate:
+    git log --oneline --abbrev-commit --all --graph --decorate
+
+    git log --oneline --abbrev-commit --all --graph --decorate --color
 

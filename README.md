@@ -204,7 +204,9 @@ Make a branch on the current commit
 
     git rebase -i HEAD~3 - base to the 4th commit. squash 3 commits into one.
 
-    git push -f - force pushThese are my frequently used Git commands.
+    git push -f - force push
+	
+## Misc
 
     git reset --hard HEAD
 
@@ -249,7 +251,7 @@ Git remove files
 
     git push origin master
 
-[Think Like a Git](http://think-like-a-git.net)
+## [Think Like a Git](http://think-like-a-git.net)
 
     to list all commits in your repository at the command line
     git log --oneline --abbrev-commit --all

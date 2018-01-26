@@ -1,5 +1,3 @@
-# FrequentlyUsedGitCommands
-
 ## [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
 
 Create a new repo empty repository in the current directory
@@ -170,41 +168,63 @@ Make a branch on the current commit
 
 ## [GitHub & Collaboration](https://in.udacity.com/course/github-collaboration--ud456)
 
+Naming convention
+
     local - your own git repo
     remote - 3rd party git repo which may or may not be local.
     origin - main remote repo
+	
+Manage and interact with the remote repositories
 
-    git remote - manager and interact with the remote repositories.
+    git remote
+	
+Display full path to the remote repository
+
+    git remote -v
+	
+Add shortname and the remote url to the local repo	
     	
     git remote add origin git@github.com:sudhirkhanger/my-travel-plans.git - add shortname to the url
 
-    git push -u origin master - send local commits to the remote repo. (git push <remote-shortname> <branch>)
-    	
-    git remote -v - displays the shortname and url
+Send local commits to the remote repo.
 
-    git log --oneline --graph --decorate --all
+	git push -u <remote-shortname> <branch>
 
-    origin/master - tracking branch - meaning remote origin has master branch at some commit.
+Tracking branch
 
-    git pull origin master - pull origin's commit to the master branch. Retrieve commits and merge.
+    origin/master - remote branch origin has a master branch at some commit. Tracks the progress of the master branch on the remote branch origin.
+	
+Sync remote repository with the local
 
-    git fetch origin master - pull origin's commit but doesn't merge with master branch.
+	// pulls remote branch origin's commit to the master branch. Merge happens.
+    git pull origin master
+	
+Retrive commits from the remote branch and without merge
 
-    _One main point when you want to use git fetch rather than git pull is if your remote branch and your local branch both have changes that neither of the other ones has. In this case, you want to fetch the remote changes to get them in your local branch and then perform a merge manually. Then you can push that new merge commit back to the remote._
+	// fetch origin's commit
+    git fetch origin master
+	// merge origin/master with the current branch
+	git merge origin/master
 
-    git merge origin/master - merge the origin/master to the current branch.
+Number of commits made by each contributor
 
-    git shortlog - how many commits each contributor made
+	git shortlog
+	
+List contributor name and number of commits
 
-    git shortlog -s -n - number of commits and dev name 
+    git shortlog -s -n
 
-    git log --author=<contributor name> - list all commits by contributor name
+Filter commits by author name
 
-    git log --grep=<search> - search commits with search term search
+    git log --author=<contributor name>
+	
+Filter commits by search query
 
+    git log --grep=<search>
+	
     git rebase -i HEAD~3 - base to the 4th commit. squash 3 commits into one.
 
-    git push -f - force push
+	git push -f - force push
 	
 ## Misc
 

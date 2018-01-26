@@ -136,17 +136,17 @@ Ancestry References
 	~ - tilde
 
     The parent commit – the following indicate the parent commit of the current commit
-		HEAD^
-		HEAD~
-		HEAD~1
+	HEAD^
+	HEAD~
+	HEAD~1
 
 	The grandparent commit – the following indicate the grandparent commit of the current commit
-		HEAD^^
-		HEAD~2
+	HEAD^^
+	HEAD~2
 
 	The great-grandparent commit – the following indicate the great-grandparent commit of the current commit
-		HEAD^^^
-		HEAD~3
+	HEAD^^^
+	HEAD~3
 
 	^ when merged this represents the parent which had HEAD pointed to it. The other branch was merged into this one.
 	^2 the second parent or the branch which was merged into the first parent.
@@ -232,7 +232,7 @@ Retrieving Upstream Changes
 	// add the source repository
 	git remote add upstream <url-of-the-source-repository>
 	
-	//fetches changes from the upstream source repository
+	// fetches changes from the upstream source repository
 	// upstream/master - tracks where upstream's master branch is
 	git fetch upstream master
 	

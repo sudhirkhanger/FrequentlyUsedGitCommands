@@ -170,9 +170,10 @@ Make a branch on the current commit
 
 Naming convention
 
-    local - your own git repo
+    local - your local git repository
     remote - 3rd party git repo which may or may not be local.
-    origin - main remote repo
+    origin - main remote repo. Or the forked repository
+	upstream - source or the original repository where origin was forked from.
 	
 Manage and interact with the remote repositories
 
@@ -221,10 +222,46 @@ Filter commits by author name
 Filter commits by search query
 
     git log --grep=<search>
-	
-    git rebase -i HEAD~3 - base to the 4th commit. squash 3 commits into one.
 
-	git push -f - force push
+Change shortnames
+
+	git remote rename <new-name> <existing-name>
+	
+Retrieving Upstream Changes
+	
+	// add the source repository
+	git remote add upstream <url-of-the-source-repository>
+	
+	//fetches changes from the upstream source repository
+	// upstream/master - tracks where upstream's master branch is
+	git fetch upstream master
+	
+	// to sync to your fork merge into a local branch and push it to the origin
+	git checkout master
+	git merge upstream/master
+	git push origin master
+	
+Squash commits
+
+	// move commits to a new base. Squash three commits into one
+	// HEAD~3 HEAD~2 HEAD~1 HEAD
+    git rebase -i <base for example HEAD~3>
+	
+Force push a branch
+
+	git push -f <remote-branch> <local-branch>
+	
+## [Think Like a Git](http://think-like-a-git.net)
+
+    to list all commits in your repository at the command line
+    git log --oneline --abbrev-commit --all
+
+    git log --oneline --abbrev-commit --all --graph
+
+    If you want to see branch and tag labels, add --decorate:
+    git log --oneline --abbrev-commit --all --graph --decorate
+
+    git log --oneline --abbrev-commit --all --graph --decorate --color
 	
 ## Misc
 
@@ -257,10 +294,6 @@ Git Stash
     git stash list
     git stash drop
 
-Git Checkout
-
-    git checkout branch-name
-
 Git remove files
 
     git rm file1.txt
@@ -270,16 +303,3 @@ Git remove files
     git rm --cached file1.txt
 
     git push origin master
-
-## [Think Like a Git](http://think-like-a-git.net)
-
-    to list all commits in your repository at the command line
-    git log --oneline --abbrev-commit --all
-
-    git log --oneline --abbrev-commit --all --graph
-
-    If you want to see branch and tag labels, add --decorate:
-    git log --oneline --abbrev-commit --all --graph --decorate
-
-    git log --oneline --abbrev-commit --all --graph --decorate --color
-

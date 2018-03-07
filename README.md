@@ -202,7 +202,9 @@ Sync remote repository with the local
 	
 Retrive commits from the remote branch and without merge
 
-	// fetch origin's commit
+	// fetch all branches of the origin
+	git fetch origin
+	// fetch origin's commits from master branch
     git fetch origin master
 	// merge origin/master with the current branch
 	git merge origin/master
@@ -232,6 +234,8 @@ Retrieving Upstream Changes
 	// add the source repository
 	git remote add upstream <url-of-the-source-repository>
 	
+	// fetch all branches of the upstream
+	git fetch upstream
 	// fetches changes from the upstream source repository
 	// upstream/master - tracks where upstream's master branch is
 	git fetch upstream master

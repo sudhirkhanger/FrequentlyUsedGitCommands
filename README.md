@@ -233,11 +233,14 @@ Retrieving Upstream Changes
 	
 	// add the source repository
 	git remote add upstream <url-of-the-source-repository>
-	
-	// fetch all branches of the upstream
-	git fetch upstream
+
 	// fetches changes from the upstream source repository
 	// upstream/master - tracks where upstream's master branch is
+
+	// fetch all branches of the upstream
+	git fetch upstream
+
+	// fetch upstream's commits from master branch
 	git fetch upstream master
 	
 	// to sync to your fork merge into a local branch and push it to the origin

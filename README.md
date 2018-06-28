@@ -310,3 +310,10 @@ Git remove files
     git rm --cached file1.txt
 
     git push origin master
+
+### Git remove prune stale branches
+
+	git remote prune origin --dry-run
+	git remote prune origin
+	
+[How to delete remotes/origin/{branch}?](https://stackoverflow.com/a/26478292/3034693)

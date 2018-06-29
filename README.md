@@ -198,7 +198,7 @@ Tracking branch
 Sync remote repository with the local
 
 	// pulls remote branch origin's commit to the master branch. Merge happens.
-    git pull origin master
+    git pull origippn master
 	
 Retrive commits from the remote branch and without merge
 
@@ -317,3 +317,10 @@ Git remove files
 	git remote prune origin
 	
 [How to delete remotes/origin/{branch}?](https://stackoverflow.com/a/26478292/3034693)
+
+### Delete a branch from the remote
+
+	// delete local branch
+	git branch -d <branch-name>
+	// delete branch from the remote
+	git push --delete <remote> <branch>

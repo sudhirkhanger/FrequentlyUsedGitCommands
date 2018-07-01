@@ -198,7 +198,7 @@ Tracking branch
 Sync remote repository with the local
 
 	// pulls remote branch origin's commit to the master branch. Merge happens.
-    git pull origippn master
+    git pull origin master
 	
 Retrive commits from the remote branch and without merge
 

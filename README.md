@@ -324,3 +324,5 @@ Git remove files
 	git branch -d <branch-name>
 	// delete branch from the remote
 	git push --delete <remote> <branch>
+	git push origin :<branch>
+	git push origin --delete <branch>

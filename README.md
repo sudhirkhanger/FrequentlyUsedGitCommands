@@ -326,3 +326,8 @@ Git remove files
 	git push --delete <remote> <branch>
 	git push origin :<branch>
 	git push origin --delete <branch>
+
+## Tagging
+
+	git tag -a v1.0.0 -m "Releasing version v1.0.0"
+	git push origin v1.0

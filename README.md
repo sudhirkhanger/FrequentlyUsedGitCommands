@@ -331,3 +331,11 @@ Git remove files
 
 	git tag -a v1.0.0 -m "Releasing version v1.0.0"
 	git push origin v1.0
+
+## Diff
+
+	git diff <branch-one>:/path/to/file <branch-two>:/path/to/file
+
+## Merge individual files
+
+	git checkout <git brach to merge from> <file 1> <file 2>

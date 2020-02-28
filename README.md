@@ -86,13 +86,19 @@ Switch to a branch
 
 	git checkout <branch-name>
 	
-Delete a branch
+Delete a local branch
 	
     git branch -d <branch-name>
 
 Force delete a branch with unique commit
 
     git branch -D <branch-name>
+	
+Delete branch from the remote
+
+	git push --delete <remote> <branch>
+	git push origin :<branch>
+	git push origin --delete <branch>
 	
 Add a branch to commit
 
@@ -316,17 +322,6 @@ Git remove files
 	git remote prune origin --dry-run
 	git remote prune origin
 	
-[How to delete remotes/origin/{branch}?](https://stackoverflow.com/a/26478292/3034693)
-
-### Delete a branch from the remote
-
-	// delete local branch
-	git branch -d <branch-name>
-	// delete branch from the remote
-	git push --delete <remote> <branch>
-	git push origin :<branch>
-	git push origin --delete <branch>
-
 ## Tagging
 
 	git tag -a v1.0.0 -m "Releasing version v1.0.0"
@@ -339,3 +334,8 @@ Git remove files
 ## Merge individual files
 
 	git checkout <git brach to merge from> <file 1> <file 2>
+	
+## Remove unstaged changes
+
+	git checkout -- .
+	git checkout -- <file-path> // individual files

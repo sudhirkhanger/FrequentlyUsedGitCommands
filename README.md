@@ -36,10 +36,6 @@ Adds the files from the working directory to the staging index aka staging files
 
     git add <filename>
 	
-Removes files from the staging index but doesn't delete the actual content
-
-    git rm --cached <file>
-
 Add all files and folders from the current directory
 
     git add .
@@ -65,10 +61,6 @@ Add tag to a particular commit
 
     git tag -a v1.0 <SHA1>
 
-Delete a tag
-
-    git tag -d v1.0
-	
 Branch
 
 	master - default or the first branch provided by the git
@@ -86,6 +78,19 @@ Switch to a branch
 
 	git checkout <branch-name>
 	
+Delete untracked files from a working tree
+
+    git clean -d -n // dry run
+    git clean -d -f // delete untracked files
+	
+Removes files from the staging index but doesn't delete the actual content
+
+    git rm --cached <file>
+
+Delete a tag
+
+    git tag -d v1.0
+		
 Delete a local branch
 	
     git branch -d <branch-name>

@@ -308,8 +308,21 @@ Remove files after adding .gitignore
 
 Git Stash
 
+	// stash tracked changes
     git stash
+	// stash both tracked and untracked changes
+	git stash -u
+	// stash with a descriptive name
+	git stash save "save with a name"
+	// list stash
     git stash list
+	// apply most recent changes with removing from the list	
+	git stash pop
+	// apply without removing from the list
+	git stash apply
+	// apply a particular stash
+	git stash pop stash@{0}
+	// remove stash
     git stash drop
 
 Git remove files

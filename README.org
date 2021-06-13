@@ -1,4 +1,4 @@
-* [Version Control with Git](https://in.udacity.com/course/version-control-with-git--ud123)
+* [[https://in.udacity.com/course/version-control-with-git--ud123][Version Control with Git]]
 
 ** Create a new repo empty repository in the current directory
 
@@ -371,22 +371,45 @@ git push origin master
 
 ** Git Stash
 
-	// stash tracked changes
-    git stash
-	// stash both tracked and untracked changes
-	git stash -u
-	// stash with a descriptive name
-	git stash save "save with a name"
-	// list stash
-    git stash list
-	// apply most recent changes with removing from the list	
-	git stash pop
-	// apply without removing from the list
-	git stash apply
-	// apply a particular stash
-	git stash pop stash@{0}
-	// remove stash
-    git stash drop
+#+begin_src sh
+# stash tracked changes
+git stash
+#+end_src
+
+#+begin_src sh
+# stash both tracked and untracked changes
+git stash -u
+#+end_src
+
+#+begin_src sh
+# stash with a descriptive name
+git stash save "save with a name"
+#+end_src
+
+#+begin_src sh
+# list stash
+git stash list
+#+end_src
+
+#+begin_src sh
+# apply most recent changes with removing from the list	
+git stash pop
+#+end_src
+
+#+begin_src sh
+# apply without removing from the list
+git stash apply
+#+end_src
+
+#+begin_src sh
+# apply a particular stash
+git stash pop stash@{0}
+#+end_src
+
+#+begin_src sh
+# remove stash
+git stash drop
+#+end_src
 
 ** Git remove files
 

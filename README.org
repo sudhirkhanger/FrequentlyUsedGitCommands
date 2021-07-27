@@ -190,7 +190,7 @@ git merge <branch-name>
  - >>>>>>> <branch-name> is the ending indicator of what's on the branch that's being merged in (in this case, the <branch-name> branch)
 	
 ** Change the last commit or add/remove the files.
-
+   
 #+begin_src sh
 git commit --amend
 #+end_src
@@ -220,6 +220,10 @@ git revert <SHA>
 
 	^ when merged this represents the parent which had HEAD pointed to it. The other branch was merged into this one.
 	^2 the second parent or the branch which was merged into the first parent.
+
+ - HEAD~3 HEAD~2 HEAD~1 HEAD
+
+ - HEAD~1 - go back 1 commit from HEAD
 	
 ** Erase commits
 
@@ -320,9 +324,15 @@ git revert <SHA>
 	
 ** Squash commits
 
-	// move commits to a new base. Squash three commits into one
-	// HEAD~3 HEAD~2 HEAD~1 HEAD
-    git rebase -i <base for example HEAD~3>
+- Move commits to a new base.
+- Squash three commits into one then use HEAD~3
+- Change pick from 2nd line to squash. Save changes.
+- An editor would open where you can provide the new commit. Save changes.
+
+#+begin_src sh
+git rebase -i <base for example HEAD~3>
+#+end_src
+
 	
 ** Force push a branch
 
@@ -443,3 +453,11 @@ git stash drop
 
 	git checkout -- .
 	git checkout -- <file-path> // individual files
+
+** Rename branch
+
+- creats a new branch with same commits from oldname branch
+   
+#+begin_src sh
+git branch -m oldname newname
+#+end_src

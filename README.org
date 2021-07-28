@@ -461,3 +461,11 @@ git stash drop
 #+begin_src sh
 git branch -m oldname newname
 #+end_src
+
+** Create another branch off an existing one
+
+- sub-branch will be created off existing-branch
+  
+#+begin_src sh
+git checkout -b sub-branch existing-branch
+#+end_src

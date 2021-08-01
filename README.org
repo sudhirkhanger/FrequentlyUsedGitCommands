@@ -459,7 +459,7 @@ git checkout <git brach to merge from> <file 1> <file 2>
 #+end_src
 	
 * Remove unstaged changes
-XS
+
 #+begin_src sh
 git checkout -- .
 git checkout -- <file-path> # individual files

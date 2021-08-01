@@ -232,26 +232,17 @@ git reset --hard HEAD^
 git branch backup
 #+end_src
 
-
-#+begin_src sh
-#+end_src
-	
-
-#+begin_src sh
-#+end_src
-
 * Remote
 	
 #+begin_src sh
-  # Manage and interact with the remote repositories
-  git remote
+# Manage and interact with the remote repositories
+git remote
 
+# Display full path to the remote repository
+git remote -v
 
-  # Display full path to the remote repository
-  git remote -v
-
-  #Add shortname and the remote url to the local repo	
-  git remote add origin git@github.com:sudhirkhanger/my-travel-plans.git
+#Add shortname and the remote url to the local repo	
+git remote add origin git@github.com:sudhirkhanger/my-travel-plans.git
 #+end_src
 
 * Change shortnames

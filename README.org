@@ -46,16 +46,13 @@ git log -p
 git show <SHA1>
 #+end_src
 
-* Adds the files from the working directory to the staging index aka staging files
-
+* Add
+  
 #+begin_src sh
-git add <filename>
-#+end_src
-	
-* Add all files and folders from the current directory
-
-#+begin_src sh
+# Add all files and folders from the current directory
 git add .
+# Adds the files from the working directory to the staging index aka staging files
+git add <filename>
 #+end_src
 	
 * Saves or records the changes to the repository (from the staging index)
@@ -235,22 +232,32 @@ git reset --hard HEAD^
 git branch backup
 #+end_src
 
-* Manage and interact with the remote repositories
 
 #+begin_src sh
-git remote
 #+end_src
 	
-* Display full path to the remote repository
 
 #+begin_src sh
-git remote -v
 #+end_src
+
+* Remote
 	
-* Add shortname and the remote url to the local repo	
-    	
 #+begin_src sh
-git remote add origin git@github.com:sudhirkhanger/my-travel-plans.git
+  # Manage and interact with the remote repositories
+  git remote
+
+
+  # Display full path to the remote repository
+  git remote -v
+
+  #Add shortname and the remote url to the local repo	
+  git remote add origin git@github.com:sudhirkhanger/my-travel-plans.git
+#+end_src
+
+* Change shortnames
+
+#+begin_src sh
+git remote rename <new-name> <existing-name>
 #+end_src
 
 * Send local commits to the remote repo.
@@ -299,12 +306,6 @@ git log --author=<contributor name>
 
 #+begin_src sh
 git log --grep=<search>
-#+end_src
-
-* Change shortnames
-
-#+begin_src sh
-git remote rename <new-name> <existing-name>
 #+end_src
 	
 * Retrieving Upstream Changes
@@ -363,12 +364,6 @@ git branch -a
 git branch -vv
 git branch -v
 #+end_src
-    
-* Set Url
-
-#+BEGIN_SRC sh
-git remote set-url origin new-url
-#+END_SRC
 
 * Remove files after adding .gitignore
 

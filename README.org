@@ -466,3 +466,10 @@ git branch -m oldname newname
 #+begin_src sh
 git checkout -b sub-branch existing-branch
 #+end_src
+
+* Revert/reset a single file
+
+#+begin_src sh
+# Update [filename] with version from origin remote and master branch
+git checkout origin/master [filename]
+#+end_src

@@ -16,28 +16,50 @@ git clone <path-to-repository-to-clone>
 git status
 #+end_src
 	
-* Displays all the commits of a repository including SHA, author, date, and the message
+* Log
 
 #+begin_src sh
+# Displays all the commits of a repository including SHA, author, date, and the message
 git log
-#+end_src
-	
-* Displays short SHA and the message only
 
-#+begin_src sh
+# Displays short SHA and the message only
 git log --oneline
-#+end_src
-	
-* Displays modified files, number of lines added or removed, and summary
 
-#+begin_src sh
+# Displays modified files, number of lines added or removed, and summary
 git log --stat
+
+# Displays modified files, location of the lines added or removed, and the actual changes
+git log -p
+
+# Display all branchs in a graph
+git log --oneline --decorate --graph --all
+
+# Filter commits by author name
+git log --author=<contributor name>
+
+# Filter commits by search query
+git log --grep=<search>
+
+# Show commits between two branches
+git log origin/master..HEAD
+
+# To list all commits in your repository at the command line
+git log --oneline --abbrev-commit --all
+git log --oneline --abbrev-commit --all --graph
+
+# If you want to see branch and tag labels, add --decorate:
+git log --oneline --abbrev-commit --all --graph --decorate
+git log --oneline --abbrev-commit --all --graph --decorate --color
 #+end_src
-	
-* Displays modified files, location of the lines added or removed, and the actual changes
+
+* Shortlog
 
 #+begin_src sh
-git log -p
+# Number of commits made by each contributor
+git shortlog
+
+# List contributor name and number of commits
+git shortlog -s -n
 #+end_src
 	
 * Displays information about one particular commit
@@ -184,11 +206,6 @@ git branch <branch-name> <SHA1>
 git checkout -b <branch-name>
 #+end_src
 	
-* Display all branchs in a graph
-
-#+begin_src sh
-git log --oneline --decorate --graph --all
-#+end_src
 
 * Merge
 
@@ -275,30 +292,6 @@ git fetch origin master
 git merge origin/master
 #+end_src
 
-* Number of commits made by each contributor
-
-#+begin_src sh
-git shortlog
-#+end_src
-	
-* List contributor name and number of commits
-
-#+begin_src sh
-git shortlog -s -n
-#+end_src
-
-* Filter commits by author name
-
-#+begin_src sh
-git log --author=<contributor name>
-#+end_src
-	
-* Filter commits by search query
-
-#+begin_src sh
-git log --grep=<search>
-#+end_src
-	
 * Retrieving Upstream Changes
 	
 #+begin_src sh
@@ -339,15 +332,7 @@ git push -f <remote-branch> <local-branch>
 	
 * Misc
 
-#+begin_src sh
-# to list all commits in your repository at the command line
-git log --oneline --abbrev-commit --all
-git log --oneline --abbrev-commit --all --graph
-
-# If you want to see branch and tag labels, add --decorate:
-git log --oneline --abbrev-commit --all --graph --decorate
-git log --oneline --abbrev-commit --all --graph --decorate --color
-	
+#+begin_src sh	
 git reset --hard HEAD
 git remote show branch
 git branch -r
@@ -473,3 +458,12 @@ git checkout -b sub-branch existing-branch
 # Update [filename] with version from origin remote and master branch
 git checkout origin/master [filename]
 #+end_src
+
+* Reset branch to same as remote
+
+#+begin_src sh
+git fetch origin
+git reset --hard origin/branch-name
+#+end_src
+
+* 

@@ -40,7 +40,8 @@ git log --author=<contributor name>
 # Filter commits by search query
 git log --grep=<search>
 
-# Show commits between two branches
+# Show commits between two origin/master and HEAD
+# Shows unpushed commits if HEAD is on the master branch
 git log origin/master..HEAD
 
 # To list all commits in your repository at the command line
@@ -205,7 +206,6 @@ git branch <branch-name> <SHA1>
 #+begin_src sh
 git checkout -b <branch-name>
 #+end_src
-	
 
 * Merge
 
@@ -466,4 +466,3 @@ git fetch origin
 git reset --hard origin/branch-name
 #+end_src
 
-* 

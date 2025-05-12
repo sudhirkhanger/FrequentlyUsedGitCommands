@@ -466,3 +466,22 @@ git fetch origin
 git reset --hard origin/branch-name
 #+end_src
 
+* Update a branch without checking out
+
+This only works in case of fast forward.
+
+#+begin_src sh
+git fetch <remote> <sourceBranch>:<destinationBranch>
+# Merge origin/develop into local develop
+git fetch origin develop:develop
+#+end_src
+
+[[https://stackoverflow.com/a/17722977/3034693][Source]]
+
+* Update a feature branch with main branch
+
+#+begin_src sh
+git pull origin develop
+#+end_src
+
+[[https://stackoverflow.com/a/73501164/3034693][Source]]
